@@ -1,0 +1,20 @@
+/* Standard syntax */
+:fullscreen {
+  background-color: grey;
+}
+
+
+div {
+	background-color: red;
+}
+/* Style the button */
+button {
+	border-radius: 10px ;
+	background-color: grey;
+	padding: 20px;
+	font-size: 20px;
+}
+
+:fullscreen button {
+  background-color: white;
+}

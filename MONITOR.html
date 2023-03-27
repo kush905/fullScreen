@@ -5,40 +5,13 @@
 
 <link href="main.css" rel="stylesheet">
 </head>
-<body >
+<body style="background-color:grey;">
 
-
-<h2>Fullscreen with JavaScript</h2>
-<p>Click on the "Open Fullscreen" button to open this page in fullscreen mode. Close it by either clicking the "Esc" key on your keyboard, or with the "Close Fullscreen" button.</p>
-
-<div>
-
-</div>
 <!--<button onclick="openFullscreen();"  >Open Fullscreen</button> -->
-<button onmouseout="localStorage.setItem('1','blue')" onmouseover="localStorage.setItem('1','red')" >Close Fullscreen</button>
+<button  id='pl-1'>place-1</button>
 
 <script>
 
-var elem = document.documentElement;
-function openFullscreen() {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) { /* Safari */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE11 */
-    elem.msRequestFullscreen();
-  }
-}
-
-function closeFullscreen() {
-  if (document.exitFullscreen) {
-    document.exitFullscreen();
-  } else if (document.webkitExitFullscreen) { /* Safari */
-    document.webkitExitFullscreen();
-  } else if (document.msExitFullscreen) { /* IE11 */
-    document.msExitFullscreen();
-  }
-}
 
 /*
 if ("full"==localStorage.getItem('1')){
@@ -71,8 +44,6 @@ function sayHi() {
 
 setInterval(sayHi , 2);
 </script>
-
-<p>Note: Internet Explorer 10 and earlier versions do not support the msRequestFullscreen() method.</p>
 
 </body>
 </html>
