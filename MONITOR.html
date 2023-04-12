@@ -7,31 +7,12 @@
 </head>
 <body style="background-color:grey;">
 
-<!--<button onclick="openFullscreen();"  >Open Fullscreen</button> -->
 <button  id='pl-1'>place-1</button>
+
+<a href="https://developer.mozilla.org">MDN</a>
 
 <script>
 
-
-/*
-if ("full"==localStorage.getItem('1')){
-	openFullscreen();
-}
-
-function go() {
-  var poem = 'Ночь, улица, фонарь, !!! аптека,* Бессмысленный и тусклый свет.* Живи еще !!! хоть четверть века -* Все будет так. Исхода !!! нет.* Умрешь - начнешь опять сначала* И повторится !!! все, как встарь:* Ночь, ледяная !!! рябь канала,* Аптека, улица, !!! фонарь.*';
-  poem = poem.replace(/\s/g, ' #');
-  var arr = poem.split('#');
-  for (var i = 0; i < arr.length; i++) {
-    setTimeout((function(index){ 
-      return function() {
-        console.log(index + ": " + arr[index])
-      };
-    })(i), 10 * (i + 1))
-  }
-}
-
-go();*/
 
 var x = document.querySelector('button');
 
@@ -42,9 +23,28 @@ function sayHi() {
 	console.log(localStorage.getItem('1'));
 }
 
-setInterval(sayHi , 2);
+setInterval(sayHi , 150);
+
+
 </script>
 
 </body>
+<script>
+
+let elem = document.documentElement;
+
+function FulScr() {
+	elem
+  .requestFullscreen({ navigationUI: "show" })
+  .then(() => {})
+  .catch((err) => {
+    alert(
+      `An error occurred while trying to switch into fullscreen mode: ${err.message} (${err.name})`
+    );
+  });
+}
+document.onclick = FulScr; //срабатывает на весь экран так как пользователь сам инициирует действие
+//получает разрешение на срабатывание при взаиодействии пользователем с любым элементом страницы 
+</script>
 </html>
 
